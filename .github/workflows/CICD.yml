@@ -24,7 +24,7 @@ jobs:
           run: ./mvnw clean package -DattachMuleSources -Pgithub deploy
           env:
             GITHUB_USER_REF: ${{ secrets.GIT_USER }}
-            GITHUB_TOKEN_REF: ${{ secrets.GIT_TOKEN }} # value to be placed
+            GITHUB_TOKEN_REF: ${{ secrets.GIT_TOKEN }} # value to be placed here
   DockerImageCreation:
     needs: BuildCreation
     runs-on: ubuntu-latest

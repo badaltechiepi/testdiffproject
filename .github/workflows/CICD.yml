@@ -36,7 +36,7 @@ jobs:
       - name: Build image
         run: |
           echo "${{ secrets.GIT_TOKEN }}" | docker login ghcr.io -u ${{ secrets.GIT_USER }} --password-stdin
-          curl -LJO  https://maven.pkg.github.com/badaltechiepi/spring-pet-clinic-cicd/org.springframework.samples/release-1.0/spring-petclinic.jar      
+          curl -LJO  https://maven.pkg.github.com/badaltechiepi/spring-pet-clinic-cicd/org.springframework.samples/2.3.1.BUILD/spring-petclinic.jar      
           docker build . --file Dockerfile --tag $IMAGE_NAME --label "runnumber=${GITHUB_RUN_ID}"
       - name: Log in to registry
         # This is where you will update the PAT to GITHUB_TOKEN

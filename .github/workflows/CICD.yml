@@ -67,7 +67,7 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v1
       with:
          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }} #add this to the secret in the repo
-         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }} #add this to the secret in the repo
+         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }} #add this to the secret in the repop
          aws-region: us-east-2
     - name: Deploy image to Amazon EKS
       run: |

@@ -1,0 +1,53 @@
+<servers>
+
+<server>
+
+     <id>github</id>
+
+     <username>${{ secrets.GIT_USER }}</username>
+
+     <password>${{ secrets.GIT_TOKEN }}</password>
+
+     </server>
+
+</servers>
+
+<profiles>
+
+ <profile>
+
+      <id>github</id>
+
+      <repositories>
+
+        <repository>
+
+          <id>central</id>
+
+          <url>https://repo1.maven.org/maven2</url>
+
+  <releases><enabled>true</enabled></releases>
+
+          <snapshots><enabled>true</enabled></snapshots>
+
+        </repository>
+
+        <repository>
+
+          <id>github</id>
+
+          <url>https://maven.pkg.github.com/badaltechiepi/spring-pet-clinic-cicd</url>
+
+          <snapshots>
+
+            <enabled>true</enabled>
+
+          </snapshots>
+
+        </repository>
+
+      </repositories>
+
+    </profile>
+
+</profiles>
